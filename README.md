@@ -1,7 +1,6 @@
 # Sistema de Gerenciamento de Produtos em Java
 
 ![Java](https://img.shields.io/badge/Java-17%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 Um sistema simples de gerenciamento de produtos desenvolvido em Java puro (sem frameworks) para fins educacionais e de portfólio.
 
