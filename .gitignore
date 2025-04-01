@@ -4,37 +4,3 @@
 .settings/
 bin/
 .metadata/
-
-### Arquivos de build/compilação ###
-*.class
-*.war
-*.ear
-*.jar
-
-### Arquivos de log e temporários ###
-*.log
-*.tmp
-*.bak
-*.swp
-*~
-
-### Arquivos do sistema operacional ###
-.DS_Store
-Thumbs.db
-
-### Arquivos de IDE/Editors ###
-.idea/
-*.iml
-*.ipr
-*.iws
-
-### Arquivos de dependências ###
-lib/
-target/
-build/
-dist/
-
-### Arquivos de persistência do projeto (opcional) ###
-# Se quiser versionar seus arquivos de dados, remova esta linha
-*.data
-data/
