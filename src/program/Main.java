@@ -19,6 +19,8 @@ public class Main {
 				System.out.println("Digite um numero entre 0 e 10 para iniciar a lista");
 				System.out.print("-> ");
 				int tamanho = sc.nextInt();
+
+				if (tamanho > 10){ tamanho = 10;}
 				
 				Product[] vect = new Product[tamanho];
 				
@@ -36,8 +38,44 @@ public class Main {
 				// imprime a lista completa dos produtos
 				System.out.printf("%n");
 				for (int i = 0; i<vect.length; i++) {
-					System.out.printf("%s --- $R %.2f%n", vect[i].getNome(), vect[i].getPreco());
+					System.out.printf("%s --- R$ %.2f%n", vect[i].getNome(), vect[i].getPreco());
 				}
+
+				System.out.print("Qual produto deseja mudar o preco?: ");
+				String nomeProduto = sc.next();
+
+				for ( int i = 0; i < vect.length; i++){
+					if ( vect[i].getNome().equals(nomeProduto)){
+						System.out.println("Deseja adicionar ou diminuir o preço dos produtos? [a/d] ");
+						String colocarProduto = sc.next();
+
+						switch (colocarProduto) {
+							case "a":
+								System.out.printf("Digite o valor do %s: ", vect[i].getNome());
+								vect[i].setPreco(sc.nextDouble());
+								// imprime a lista completa dos produtos
+								System.out.printf("%n");
+								for (int j = 0; j<vect.length; j++) {
+								System.out.printf("%s --- R$ %.2f%n", vect[j].getNome(), vect[j].getPreco());
+								}
+								break;
+							case "d":
+								System.out.printf("Digite o valor a ser retirado do %s: ", vect[i].getNome());
+								double sub = sc.nextDouble();
+								vect[i].setPreco(vect[i].getPreco() - sub);
+								// imprime a lista completa dos produtos
+								System.out.printf("%n");
+								for (int j = 0; j<vect.length; j++) {
+								System.out.printf("%s --- R$ %.2f%n", vect[j].getNome(), vect[j].getPreco());
+								}
+								break;
+
+							default:
+								break;
+						} 
+					}
+				}
+
 				break;
 
 			// Fecha o programa
